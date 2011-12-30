@@ -20,3 +20,37 @@ body{
 #dropzone.editor{
   border: 2px solid #91A5C9;
 }
+
+#toolbar{
+  margin: 18px auto;
+  width: 400px;
+}
+
+#toolbar ul{
+  list-style: none;
+  margin:     0;
+  padding:    0;
+  text-align: center;
+}
+
+#toolbar li{
+  background: #C4D3EE;
+  border:     2px solid #91A5C9;
+  color:      #6A7B9A;
+  cursor:     pointer;
+  display:    inline-block;
+  padding:    2px 4px;
+}
+
+#toolbar li:hover{
+  background: #E4EDFE;
+}
+
+#toolbar li:active{
+  background: #6E8ABE;
+  color:      #D9E6FC;
+}
+ #toolbar ul{
+   display: none;
+ }
+

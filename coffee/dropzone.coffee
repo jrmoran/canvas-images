@@ -1,6 +1,9 @@
+# # Dropzone
+
+# Makes a dom node `target` a dropzone for images
 class Dropzone
   constructor: (target)->
-    @el = document.getElementById target
+    @el = target
 
     # events
     @el.ondragover = ->
@@ -11,6 +14,8 @@ class Dropzone
       @className = ''
       return false
 
+  # run callback `fun` when a new image has been dropped. The callback
+  # will be passed the `Image` instance
   onImageDropped: (fun)->
     @el.ondrop  = (e)->
       @className = ''
