@@ -7,35 +7,37 @@ class Dropzone
 
     # events
     @el.ondragover = ->
-      @className = 'hover'
+      @classList.remove 'editor'
+      @classList.add 'hover'
       return false
 
     @el.ondragleave  = ->
-      @className = ''
+      @classList.remove 'hover'
       return false
+
 
   # run callback `fun` when a new image has been dropped. The callback
   # will be passed the `Image` instance
   onImageDropped: (fun)->
     @el.ondrop  = (e)->
-      @className = ''
       reader     = new FileReader()
       file       = e.dataTransfer.files[0]
 
       @innerHTML = 'Loading....'
-
-      dropbox = this
+      dropbox    = this
 
       reader.onload = (e2)->
         dropbox.innerHTML = ''
-        dropbox.className = 'editor'
+        dropbox.classList.add 'editor'
 
-        # create image and imageCanvas instances
-        img     = new Image()
+        img     = new Image()           # create image and imageCanvas instances 
         img.src = e2.target.result
 
-        # run callback and pass image
-        fun img
+        img.onload = ->
+          fun img                       # run callback and pass image
+
+        e2.preventDefault()
 
       # this will read the file and fire the reader's `load` event when done
       reader.readAsDataURL file
+      e.preventDefault()
