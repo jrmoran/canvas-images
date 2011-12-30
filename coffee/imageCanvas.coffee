@@ -64,4 +64,6 @@ class ImageCanvas
   redraw: -> @ctx.putImageData @imgData, 0, 0
 
   # restore image to its original state
-  restore: -> @ctx.putImageData @cacheData, 0, 0
+  restore: -> 
+    @ctx.putImageData @cacheData, 0, 0
+    @imgData   = @ctx.getImageData 0, 0, @width, @height
