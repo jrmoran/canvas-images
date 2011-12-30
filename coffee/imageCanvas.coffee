@@ -1,13 +1,19 @@
 # # ImageCanvas
 
-# The constructor requires an `Image` instance.
+# The constructor requires an `Image` instance and a `target` dom node
+# where the canvas will be appended.
 class ImageCanvas
-  constructor: (img)->
+  constructor: (img, target)->
     canvas  = document.createElement 'canvas'
+    return if not canvas.getContext
+
     @ctx    = canvas.getContext '2d'
     @width  = canvas.width  = img.width
     @height = canvas.height = img.height
-    document.body.appendChild canvas
+
+    target.appendChild canvas
+    target.style.width  = "#{@width}px"
+    target.style.height = "#{@height}px"
 
     @ctx.drawImage img, 0, 0
 

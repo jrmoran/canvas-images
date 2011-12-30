@@ -1,0 +1,22 @@
+body{
+  font-family: 'helvetica', sans-serif
+}
+
+#dropzone{
+  background:  #C4D3EE;
+  border:      4px dashed #91A5C9;
+  color:       #91A5C9;
+  font-size:   32px;
+  margin:      auto;
+  padding:     20px;
+  text-align:  center;
+  width:       400px;
+}
+
+#dropzone.hover{
+  background: #E4EDFE;
+}
+
+#dropzone.editor{
+  border: 2px solid #91A5C9;
+}

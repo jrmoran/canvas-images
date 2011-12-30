@@ -10,7 +10,7 @@ fs            = require 'fs'
 config =
   srcDir:  'coffee'
   outDir:  'js'
-  inFiles: [ 'color', 'imageCanvas', 'app' ]
+  inFiles: [ 'color', 'imageCanvas', 'dropzone', 'app' ]
   outFile: 'client'
   yuic:    '~/Dropbox/toolbox/dotfiles/bin/yuicompressor-2.4.2.jar'
 
