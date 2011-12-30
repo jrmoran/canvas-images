@@ -7,10 +7,11 @@ dz.onImageDropped (img)->
   imgCan  = new ImageCanvas img, dz.el
 
   toolbar.onChange (option)->
+    return unless imgCan
     switch option
       when 'grayscale'
-        if imgCan
-          imgCan.eachPixel (color, x, y)->
-            imgCan.setColor x, y, color.toGrayScale()
+        imgCan.eachPixel (color, x, y)->
+          imgCan.setColor x, y, color.toGrayScale()
       when 'restore'
-        console.log 'restore'
+        imgCan.restore()
+

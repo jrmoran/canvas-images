@@ -17,7 +17,8 @@ class ImageCanvas
 
     @ctx.drawImage img, 0, 0
 
-    @imgData = @ctx.getImageData 0, 0, @width, @height
+    @imgData   = @ctx.getImageData 0, 0, @width, @height
+    @cacheData = @ctx.getImageData 0, 0, @width, @height
 
   # ## getColor
   # gets Color at a given `x`, `y` coordinate
@@ -61,3 +62,6 @@ class ImageCanvas
 
   # this puts the image buffer back to the image
   redraw: -> @ctx.putImageData @imgData, 0, 0
+
+  # restore image to its original state
+  restore: -> @ctx.putImageData @cacheData, 0, 0
