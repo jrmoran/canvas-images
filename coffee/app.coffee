@@ -21,6 +21,13 @@ dz.onImageDropped (img)->
       when 'darken'
         imgCan.eachPixel (color, x, y)->
           imgCan.setColor x, y, color.darken 100
+      when 'sharpen'
+        imgCan.filter [ 0, -1,  0,
+                       -1,  5, -1,
+                        0, -1,  0 ]
+      when 'smooth'
+        imgCan.filter [ 1, 1, 1,
+                        1, 2, 1,
+                        1, 1, 1 ]
       when 'restore'
         imgCan.restore()
-
