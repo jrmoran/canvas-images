@@ -1,3 +1,5 @@
+# Jaime Moran 2011
+
 # # Toolbar
 
 # Pass a dom node `target` to the constructor. Use `onChange` to react

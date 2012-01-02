@@ -1,3 +1,5 @@
+# Jaime Moran 2011
+
 # # Running
 
 #
@@ -25,9 +27,21 @@ dz.onImageDropped (img)->
         imgCan.filter [ 0, -1,  0,
                        -1,  5, -1,
                         0, -1,  0 ]
+      when 'extrasharp'
+        imgCan.filter [ -1, -1, -1,
+                        -1,  9, -1,
+                        -1, -1, -1 ]
       when 'smooth'
         imgCan.filter [ 1, 1, 1,
                         1, 2, 1,
                         1, 1, 1 ]
+      when 'raised'
+        imgCan.filter [ 0, 0, -2,
+                        0, 2,  0,
+                        1, 0,  0 ]
+      when 'motionblur'
+        imgCan.filter [ 0, 0, 1,
+                        0, 0, 0,
+                        1, 0, 0 ]
       when 'restore'
         imgCan.restore()

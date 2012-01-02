@@ -1,3 +1,5 @@
+# Jaime Moran 2011
+
 # # Dropzone
 
 # Makes a dom node `target` a dropzone for images

@@ -1,3 +1,5 @@
+# Jaime Moran 2011
+
 # # ImageCanvas
 
 # The constructor requires an `Image` instance and a `target` dom node
@@ -87,9 +89,9 @@ class ImageCanvas
     #
     # we access the surrounding pixels by addition and substraction
     #
-    #    (-1,-1)  (0,-1)  (1,-1)
-    #    (-1, 0)  (0, 0)  (1, 0)
-    #    (-1, 1)  (0, 1)  (1, 1)
+    #     (-1,-1)  (0,-1)  (1,-1)
+    #     (-1, 0)  (0, 0)  (1, 0)
+    #     (-1, 1)  (0, 1)  (1, 1)
     #
     indices = [-1, 0, 1]     # this could be expanded to support bigger matrices
 
