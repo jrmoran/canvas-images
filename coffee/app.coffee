@@ -1,5 +1,10 @@
 # Jaime Moran 2011
 
+# * [Color.coffee](color.html)
+# * [Toolbar.coffee](toolbar.html)
+# * [ImageCanvas.coffee](imageCanvas.html)
+# * [Dropzone.coffee](dropzone.html)
+
 # # Running
 
 #
